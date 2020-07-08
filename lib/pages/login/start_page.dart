@@ -20,6 +20,7 @@ class StartPage extends StatelessWidget{
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage("assets/backgroundmountain.png"),
+                              fit: BoxFit.fitWidth,
                               alignment: Alignment.bottomCenter
                             ),
                           ),
