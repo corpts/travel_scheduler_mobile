@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'pages/login/start_page.dart';
 import 'pages/menu/menu.dart';
 
-import 'ext/color.dart' as ext;
 
 void main() {
   runApp(MyApp());
@@ -17,8 +16,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIOverlays ([]);
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ext.color,
-      initialRoute: '/menu',
+      initialRoute: '/login_start',
       routes: {
         '/' : (context) => MyHomePage(title: 'Flutter Demo Home Page'),
         '/login_start': (context) => StartPage(),
