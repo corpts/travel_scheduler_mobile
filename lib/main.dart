@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'pages/login/start_page.dart';
+import 'pages/login/sign_up.dart';
 import 'pages/menu/menu.dart';
 
 
@@ -16,11 +17,12 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIOverlays ([]);
     return MaterialApp(
       title: 'Flutter Demo',
-      initialRoute: '/login_start',
+      initialRoute: '/sign_up',
       routes: {
         '/' : (context) => MyHomePage(title: 'Flutter Demo Home Page'),
         '/login_start': (context) => StartPage(),
         '/menu': (context) => MenuPage(),
+        '/sign_up': (context) => SignUpPage(),
       }
     );
   }
