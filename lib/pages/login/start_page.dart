@@ -127,16 +127,16 @@ class StartPage extends StatelessWidget{
             ),
           ),
         ),
-        Container(
-          child: Image(
-            image: AssetImage("assets/login.png"),
-            color: Color.fromRGBO(255, 255, 255, 0.0),
-            colorBlendMode: BlendMode.modulate,
-            height: double.infinity,
-            width: double.infinity,
-            fit: BoxFit.cover
-          ),
-        )
+//        Container(
+//          child: Image(
+//            image: AssetImage("assets/login.png"),
+//            color: Color.fromRGBO(255, 255, 255, 0.0),
+//            colorBlendMode: BlendMode.modulate,
+//            height: double.infinity,
+//            width: double.infinity,
+//            fit: BoxFit.cover
+//          ),
+//        )
       ]
     );
   }
