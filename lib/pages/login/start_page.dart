@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_scheduler/ext/color.dart' as ext;
 
@@ -8,6 +7,7 @@ class StartPage extends StatelessWidget{
     return Stack(
       children: [
         Scaffold(
+          backgroundColor: ext.ColorProvider.whiteLight,
           body: Center(
             child: Container(
               child: Stack(
@@ -60,8 +60,10 @@ class StartPage extends StatelessWidget{
                                       onPressed: (){},
                                       child: Text('SING IN',
                                         style: TextStyle(
+                                          fontFamily: 'Roboto',
+                                          fontWeight: FontWeight.w300,
                                           color: ext.ColorProvider.whitePrimary,
-                                          fontSize: 15.0
+                                          fontSize: 14.0
                                         ),
                                       ),
                                       color: ext.ColorProvider.redPrimary,
@@ -81,8 +83,10 @@ class StartPage extends StatelessWidget{
                                       onPressed: (){},
                                       child: Text('CREATE ACCOUNT',
                                         style: TextStyle(
+                                          fontFamily: 'Roboto',
+                                          fontWeight: FontWeight.w300,
                                           color: ext.ColorProvider.blackPrimary,
-                                          fontSize: 15.0
+                                          fontSize: 14.0
                                         ),
                                       ),
                                       color: Color.fromRGBO(255, 255, 255, 0.75),
@@ -100,14 +104,14 @@ class StartPage extends StatelessWidget{
                                     children: [
                                       MaterialButton(
                                         shape: CircleBorder(),
-                                        child: Text('G'),
+                                        child: Image.asset("assets/GoogleLogo.png", height: 40),
                                         height: 72,
                                         color: Colors.white,
                                         onPressed: () {  },
                                       ),
                                       MaterialButton(
                                         shape: CircleBorder(),
-                                        child: Text('F'),
+                                        child: Image.asset("assets/faceBookIcon.png", height: 40),
                                         color: Colors.white,
                                         height: 72,
                                         onPressed: () {  },
@@ -130,7 +134,7 @@ class StartPage extends StatelessWidget{
 //        Container(
 //          child: Image(
 //            image: AssetImage("assets/login.png"),
-//            color: Color.fromRGBO(255, 255, 255, 0.0),
+//            color: Color.fromRGBO(255, 255, 255, 0.1),
 //            colorBlendMode: BlendMode.modulate,
 //            height: double.infinity,
 //            width: double.infinity,
