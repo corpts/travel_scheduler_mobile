@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'pages/login/start_page.dart';
-import 'pages/menu/menu.dart';
 
 
 void main() {
@@ -20,7 +18,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/' : (context) => MyHomePage(title: 'Flutter Demo Home Page'),
         '/login_start': (context) => StartPage(),
-        '/menu': (context) => MenuPage(),
       }
     );
   }
