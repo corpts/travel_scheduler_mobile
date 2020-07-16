@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:travel_scheduler/ext/text_style.dart';
 import 'package:travel_scheduler/ext/color.dart' as ext;
+import 'package:travel_scheduler/pages/login/sign_up.dart';
+import 'package:travel_scheduler/pages/login/sing_in.dart';
 
 class StartPage extends StatelessWidget{
   @override
@@ -57,14 +60,13 @@ class StartPage extends StatelessWidget{
                                     width: double.infinity,
                                     height: 64,
                                     child: MaterialButton(
-                                      onPressed: (){},
+                                      onPressed: (){
+                                        Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => SignInPage())
+                                        );
+                                      },
                                       child: Text('SING IN',
-                                        style: TextStyle(
-                                          fontFamily: 'Roboto',
-                                          fontWeight: FontWeight.w300,
-                                          color: ext.ColorProvider.whitePrimary,
-                                          fontSize: 14.0
-                                        ),
+                                        style: TextStyleLib.buttonWhiteTS
                                       ),
                                       color: ext.ColorProvider.redPrimary,
                                       shape: RoundedRectangleBorder(
@@ -80,14 +82,13 @@ class StartPage extends StatelessWidget{
                                     width: double.infinity,
                                     height: 64,
                                     child: MaterialButton(
-                                      onPressed: (){},
+                                      onPressed: (){
+                                        Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => SignUpPage())
+                                        );
+                                      },
                                       child: Text('CREATE ACCOUNT',
-                                        style: TextStyle(
-                                          fontFamily: 'Roboto',
-                                          fontWeight: FontWeight.w300,
-                                          color: ext.ColorProvider.blackPrimary,
-                                          fontSize: 14.0
-                                        ),
+                                        style: TextStyleLib.buttonBlackTS
                                       ),
                                       color: Color.fromRGBO(255, 255, 255, 0.75),
                                       shape: RoundedRectangleBorder(
