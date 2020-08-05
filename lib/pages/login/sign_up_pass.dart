@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:travel_scheduler/ext/color.dart' as ext;
 
-class SignUpPage extends StatefulWidget{
+class SignUpPassPage extends StatefulWidget{
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _SignUpPassPageState createState() => _SignUpPassPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignUpPassPageState extends State<SignUpPassPage> {
   @override
   void initState() {
     super.initState();
@@ -21,11 +21,9 @@ class _SignUpPageState extends State<SignUpPage> {
           bottomNavigationBar: Padding(
             padding: const EdgeInsets.only(bottom: 34),
             child: MaterialButton(
-              onPressed: (){
-                Navigator.pushNamed(context, '/sign_up_pass');
-              },
+              onPressed: (){},
               child: Text(
-                'NEXT',
+                'FINISH',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: ext.ColorProvider.redPrimary,
@@ -75,7 +73,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               "Sign Up",
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                fontSize: 52
+                                  fontSize: 52
                               ),
                             ),
                           ),
@@ -90,7 +88,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 24),
                       child: Text(
-                          "We need some\n information about you",
+                        "Create your password\nto identify you",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 28,
@@ -141,22 +139,22 @@ class SignUpFieldsState extends State<SignUpFields>{
                 children: [
                   TextFormField(
                     style: TextStyle(
-                        fontSize: 24,
-                        color: ext.ColorProvider.blackDark,
+                      fontSize: 24,
+                      color: ext.ColorProvider.blackDark,
                     ),
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(0),
-                      isDense: true,
-                      border: InputBorder.none,
-                      hintText: "What's you name?",
-                      hintStyle: TextStyle(
-                        fontSize: 22,
-                        color: ext.ColorProvider.blackDark
-                      )
+                        contentPadding: EdgeInsets.all(0),
+                        isDense: true,
+                        border: InputBorder.none,
+                        hintText: "Enter your Password",
+                        hintStyle: TextStyle(
+                            fontSize: 22,
+                            color: ext.ColorProvider.blackDark
+                        )
                     ),
                   ),
                   Text(
-                    'YOU NAME',
+                    'YOU PASSWORD',
                     style: TextStyle(
                         fontSize: 14,
                         color: ext.ColorProvider.redLight
@@ -179,7 +177,7 @@ class SignUpFieldsState extends State<SignUpFields>{
                         contentPadding: EdgeInsets.all(0),
                         isDense: true,
                         border: InputBorder.none,
-                        hintText: "What's you second name?",
+                        hintText: "Confirm your Password",
                         hintStyle: TextStyle(
                             fontSize: 22,
                             color: ext.ColorProvider.blackDark
@@ -187,38 +185,7 @@ class SignUpFieldsState extends State<SignUpFields>{
                     ),
                   ),
                   Text(
-                    'YOU SECOND NAME',
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: ext.ColorProvider.redLight
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(32, 80, 0, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextFormField(
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: ext.ColorProvider.blackDark,
-                    ),
-                    decoration: InputDecoration(
-                        contentPadding: EdgeInsets.all(0),
-                        isDense: true,
-                        border: InputBorder.none,
-                        hintText: "Enter your Email",
-                        hintStyle: TextStyle(
-                            fontSize: 22,
-                            color: ext.ColorProvider.blackDark
-                        )
-                    ),
-                  ),
-                  Text(
-                    'YOU EMAIL',
+                    'CONFIRM PASSWORD ',
                     style: TextStyle(
                         fontSize: 14,
                         color: ext.ColorProvider.redLight

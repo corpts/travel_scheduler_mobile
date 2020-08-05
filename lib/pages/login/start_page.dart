@@ -80,7 +80,9 @@ class StartPage extends StatelessWidget{
                                     width: double.infinity,
                                     height: 64,
                                     child: MaterialButton(
-                                      onPressed: (){},
+                                      onPressed: (){
+                                        Navigator.pushNamed(context, '/sign_up');
+                                      },
                                       child: Text('CREATE ACCOUNT',
                                         style: TextStyle(
                                           fontFamily: 'Roboto',
@@ -111,7 +113,7 @@ class StartPage extends StatelessWidget{
                                       ),
                                       MaterialButton(
                                         shape: CircleBorder(),
-                                        child: Image.asset("assets/faceBookIcon.png", height: 40),
+                                        child: Image.asset("assets/FaceBookIcon.png", height: 40),
                                         color: Colors.white,
                                         height: 72,
                                         onPressed: () {  },
