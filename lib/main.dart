@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'pages/login/sign_up_pass.dart';
+
 import 'pages/login/start_page.dart';
 import 'pages/login/sign_up.dart';
+import 'pages/login/sign_up_password.dart';
+import 'pages/login/sing_in.dart';
 
 
 void main() {
@@ -22,7 +24,8 @@ class MyApp extends StatelessWidget {
         '/' : (context) => MyHomePage(title: 'Flutter Demo Home Page'),
         '/login_start': (context) => StartPage(),
         '/sign_up': (context) => SignUpPage(),
-        '/sign_up_pass': (context) => SignUpPassPage(),
+        '/sign_up_password': (context) => SignUpPasswordPage(),
+        '/sign_in': (context) => SignInPage()
       }
     );
   }

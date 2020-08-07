@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'package:travel_scheduler/ext/text_style.dart';
 import 'package:travel_scheduler/ext/color.dart' as ext;
-import 'package:travel_scheduler/pages/login/sign_up_password.dart';
 import 'package:travel_scheduler/pages/login/start_page.dart';
 
-class SignUpPage extends StatefulWidget{
+class SignInPage extends StatefulWidget{
 
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _SignInPageState createState() => _SignInPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateMixin {
+class _SignInPageState extends State<SignInPage> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
@@ -27,15 +26,11 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
           bottomNavigationBar: Padding(
             padding: const EdgeInsets.only(bottom: 34),
             child: MaterialButton(
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => SignUpPasswordPage())
-                );
-              },
+              onPressed: (){},
               child: Text(
-                'NEXT',
-                textAlign: TextAlign.center,
-                style: TextStyleLib.singUpButtonTS
+                  'LOGIN',
+                  textAlign: TextAlign.center,
+                  style: TextStyleLib.singUpButtonTS
               ),
             ),
           ),
@@ -81,9 +76,9 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
                           Expanded(
                             flex: 2,
                             child: Text(
-                              "Sign Up",
-                              textAlign: TextAlign.center,
-                              style: TextStyleLib.header1TS
+                                "Sign In",
+                                textAlign: TextAlign.center,
+                                style: TextStyleLib.header1TS
                             ),
                           ),
                           Expanded(
@@ -93,16 +88,6 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
                         ],
                       ),
                     ),
-                    // Lable
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 24),
-                      child: Text(
-                          "Tell us some\n information about you",
-                        textAlign: TextAlign.center,
-                        style: TextStyleLib.header2TS
-                      ),
-                    ),
-                    // Inputs
                     SignUpFields(),
                   ],
                 ),
@@ -159,15 +144,15 @@ class SignUpFieldsState extends State<SignUpFields>{
                     TextFormField(
                       style: TextStyleLib.inputTextTs,
                       decoration: InputDecoration(
-                        contentPadding: EdgeInsets.all(0),
+                          contentPadding: EdgeInsets.all(0),
                           border: InputBorder.none,
-                          hintText: "Enter your name",
+                          hintText: "Enter your Email",
                           hintStyle: TextStyleLib.inputHintTS
                       ),
                     ),
                     Text(
-                      'YOU NAME',
-                      style: TextStyleLib.hintTS
+                        'YOU EMAIL',
+                        style: TextStyleLib.hintTS
                     ),
                   ],
                 ),
@@ -182,33 +167,13 @@ class SignUpFieldsState extends State<SignUpFields>{
                     style: TextStyleLib.inputTextTs,
                     decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Enter your surname",
+                        hintText: "Enter your Password",
                         hintStyle: TextStyleLib.inputHintTS
                     ),
                   ),
                   Text(
-                      'YOU SURNAME',
+                    'YOUR PASSWORD',
                     style: TextStyleLib.hintTS,
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TextFormField(
-                    style: TextStyleLib.inputTextTs,
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Enter your Email",
-                        hintStyle: TextStyleLib.inputHintTS
-                    ),
-                  ),
-                  Text(
-                      'YOU EMAIL',
-                    style: TextStyleLib.hintTS
                   ),
                 ],
               ),
