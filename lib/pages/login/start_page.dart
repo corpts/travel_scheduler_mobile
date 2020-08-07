@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:travel_scheduler/ext/text_style.dart';
 import 'package:travel_scheduler/ext/color.dart' as ext;
 import 'package:travel_scheduler/pages/login/sign_up.dart';
@@ -112,7 +113,7 @@ class StartPage extends StatelessWidget{
                                       ),
                                       MaterialButton(
                                         shape: CircleBorder(),
-                                        child: Image.asset("assets/faceBookIcon.png", height: 40),
+                                        child: Image.asset("assets/FaceBookIcon.png", height: 40),
                                         color: Colors.white,
                                         height: 72,
                                         onPressed: () {  },

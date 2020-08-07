@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:travel_scheduler/ext/text_style.dart';
 import 'package:travel_scheduler/ext/color.dart' as ext;
-import 'package:travel_scheduler/pages/login/sign_up_password.dart';
-import 'package:travel_scheduler/pages/login/start_page.dart';
 
 class SignUpPage extends StatefulWidget{
-
   @override
   _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateMixin {
-
+class _SignUpPageState extends State<SignUpPage> {
   @override
   void initState() {
     super.initState();
@@ -28,14 +23,15 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
             padding: const EdgeInsets.only(bottom: 34),
             child: MaterialButton(
               onPressed: (){
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => SignUpPasswordPage())
-                );
+                Navigator.pushNamed(context, '/sign_up_pass');
               },
               child: Text(
                 'NEXT',
                 textAlign: TextAlign.center,
-                style: TextStyleLib.singUpButtonTS
+                style: TextStyle(
+                    color: ext.ColorProvider.redPrimary,
+                    fontSize: 26
+                ),
               ),
             ),
           ),
@@ -45,8 +41,6 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
               FocusScope.of(context).unfocus();
             },
             child: ListView(
-//              physics: const NeverScrollableScrollPhysics(),
-//              primary: false,
               children: [
                 Column(
                   children: [
@@ -68,9 +62,7 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
                                       color: ext.ColorProvider.redLight,
                                     ),
                                     onTap: () {
-                                      Navigator.push(context, MaterialPageRoute(
-                                          builder: (context) => StartPage())
-                                      );
+                                      Navigator.pop(context);
                                     },
                                     customBorder: CircleBorder(),
                                   ),
@@ -83,7 +75,9 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
                             child: Text(
                               "Sign Up",
                               textAlign: TextAlign.center,
-                              style: TextStyleLib.header1TS
+                              style: TextStyle(
+                                  fontSize: 52
+                              ),
                             ),
                           ),
                           Expanded(
@@ -97,9 +91,11 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 24),
                       child: Text(
-                          "Tell us some\n information about you",
+                        "We need some\n information about you",
                         textAlign: TextAlign.center,
-                        style: TextStyleLib.header2TS
+                        style: TextStyle(
+                          fontSize: 28,
+                        ),
                       ),
                     ),
                     // Inputs
@@ -110,16 +106,6 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
             ),
           ),
         ),
-//        Container(
-//          child: Image(
-//              image: AssetImage("assets/login_signup.png"),
-//              color: Color.fromRGBO(255, 255, 255, 0.5),
-//              colorBlendMode: BlendMode.modulate,
-//              height: double.infinity,
-//              width: double.infinity,
-//              fit: BoxFit.cover
-//          ),
-//        )
       ],
     );
   }
@@ -150,65 +136,94 @@ class SignUpFieldsState extends State<SignUpFields>{
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(8, 48, 0, 0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TextFormField(
-                      style: TextStyleLib.inputTextTs,
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.all(0),
-                          border: InputBorder.none,
-                          hintText: "Enter your name",
-                          hintStyle: TextStyleLib.inputHintTS
-                      ),
-                    ),
-                    Text(
-                      'YOU NAME',
-                      style: TextStyleLib.hintTS
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.fromLTRB(32, 66, 0, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
-                    style: TextStyleLib.inputTextTs,
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: ext.ColorProvider.blackDark,
+                    ),
                     decoration: InputDecoration(
+                        contentPadding: EdgeInsets.all(0),
+                        isDense: true,
                         border: InputBorder.none,
-                        hintText: "Enter your surname",
-                        hintStyle: TextStyleLib.inputHintTS
+                        hintText: "What's you name?",
+                        hintStyle: TextStyle(
+                            fontSize: 22,
+                            color: ext.ColorProvider.blackDark
+                        )
                     ),
                   ),
                   Text(
-                      'YOU SURNAME',
-                    style: TextStyleLib.hintTS,
+                    'YOU NAME',
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: ext.ColorProvider.redLight
+                    ),
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.fromLTRB(32, 80, 0, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
-                    style: TextStyleLib.inputTextTs,
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: ext.ColorProvider.blackDark,
+                    ),
                     decoration: InputDecoration(
+                        contentPadding: EdgeInsets.all(0),
+                        isDense: true,
                         border: InputBorder.none,
-                        hintText: "Enter your Email",
-                        hintStyle: TextStyleLib.inputHintTS
+                        hintText: "What's you second name?",
+                        hintStyle: TextStyle(
+                            fontSize: 22,
+                            color: ext.ColorProvider.blackDark
+                        )
                     ),
                   ),
                   Text(
-                      'YOU EMAIL',
-                    style: TextStyleLib.hintTS
+                    'YOU SECOND NAME',
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: ext.ColorProvider.redLight
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(32, 80, 0, 0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TextFormField(
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: ext.ColorProvider.blackDark,
+                    ),
+                    decoration: InputDecoration(
+                        contentPadding: EdgeInsets.all(0),
+                        isDense: true,
+                        border: InputBorder.none,
+                        hintText: "Enter your Email",
+                        hintStyle: TextStyle(
+                            fontSize: 22,
+                            color: ext.ColorProvider.blackDark
+                        )
+                    ),
+                  ),
+                  Text(
+                    'YOU EMAIL',
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: ext.ColorProvider.redLight
+                    ),
                   ),
                 ],
               ),

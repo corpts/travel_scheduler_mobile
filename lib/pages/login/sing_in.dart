@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:travel_scheduler/ext/text_style.dart';
 import 'package:travel_scheduler/ext/color.dart' as ext;
-import 'package:travel_scheduler/pages/login/start_page.dart';
 
 class SignInPage extends StatefulWidget{
-
   @override
   _SignInPageState createState() => _SignInPageState();
 }
@@ -63,9 +61,7 @@ class _SignInPageState extends State<SignInPage> with SingleTickerProviderStateM
                                       color: ext.ColorProvider.redLight,
                                     ),
                                     onTap: () {
-                                      Navigator.push(context, MaterialPageRoute(
-                                          builder: (context) => StartPage())
-                                      );
+                                      Navigator.pop(context);
                                     },
                                     customBorder: CircleBorder(),
                                   ),
